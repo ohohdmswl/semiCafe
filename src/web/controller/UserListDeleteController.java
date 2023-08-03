@@ -26,9 +26,7 @@ public class UserListDeleteController extends HttpServlet {
 		System.out.println("/board/userdelete[GET]");
 
 		
-		User user = userListService.getUser_no(req);
-		System.out.println("지금 삭제할 회원 번호는! : " + user);
-		
+		User user = userListService.getUser_no(req);		
 		
 		userListService.delete(user);
 		
