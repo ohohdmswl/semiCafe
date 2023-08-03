@@ -170,7 +170,6 @@ public class UserListDaoImpl implements UserListDao {
 		sql += "DELETE user_info";
 		sql += " WHERE user_no = ?";
 		
-		//왜 얘도 -1이지
 		int res = -1;
 		
 		try {
@@ -241,7 +240,6 @@ public class UserListDaoImpl implements UserListDao {
 		sql += " SET user_rank = ? ";
 		sql += " WHERE user_no = ?";
 		
-		//왜 얘도 -1이지
 		int res = -1;
 		
 		try {
