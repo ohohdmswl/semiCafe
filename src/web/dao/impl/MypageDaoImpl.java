@@ -175,7 +175,6 @@ public class MypageDaoImpl implements MypageDao{
 		sql += "DELETE user_info";
 		sql += " WHERE user_no = ?";
 		
-		//왜 얘도 -1이지
 		int res = -1;
 		
 		try {
@@ -302,7 +301,6 @@ public class MypageDaoImpl implements MypageDao{
 	    sql += "   INNER JOIN cafe_review c ON r.review_no = c.review_no)";
 	    sql += "  WHERE user_no = ?";
 		
-	  //왜 얘도 -1이지
 	  	int res = -1;
 	  		
 	  	try {
@@ -327,7 +325,6 @@ public class MypageDaoImpl implements MypageDao{
 		sql += " FROM cafe_review";
 		sql += " WHERE user_no = ?";
 		
-	  //왜 얘도 -1이지
 	  	int res = -1;
 	  		
 	  	try {
