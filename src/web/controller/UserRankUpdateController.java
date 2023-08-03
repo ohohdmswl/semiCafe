@@ -30,12 +30,8 @@ public class UserRankUpdateController extends HttpServlet {
 		@Override
 		protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-			int changeRank = Integer.parseInt(req.getParameter("userChangeRank"));
-			System.out.println("바뀐 등급 번호는 : " + changeRank);
-			
+			int changeRank = Integer.parseInt(req.getParameter("userChangeRank"));			
 			User user_no = userListService.getUser_no(req);
-			System.out.println("등급 바꿀 회원 번호는 : " + user_no);
-
 			
 			User userrank = userListService.getUserRank(req);
 			
