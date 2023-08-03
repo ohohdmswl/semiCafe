@@ -37,7 +37,6 @@ public class UserDaoImpl implements UserDao{
 			
 			while (rs.next()) {
 				
-				//음
 				cnt = rs.getInt(1);
 			}
 			
