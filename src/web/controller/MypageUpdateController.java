@@ -31,8 +31,6 @@ public class MypageUpdateController extends HttpServlet {
 		
 		user.setUser_id(userid);
 		
-		System.out.println("확인을 하자, 이걸로 진행하자 : " + user);
-		
 		User viewMypageUp = MypageService.mypageview(user);
 
 		req.setAttribute("viewMypageUp", viewMypageUp);
