@@ -28,29 +28,18 @@ public class MypageViewController extends HttpServlet {
 		
 		String userid = (String) session.getAttribute("user_id");
 		String userpw = (String) session.getAttribute("user_pw");
-
-		System.out.println("지금세션에는 : " + userid + userpw);
 		
 		User user = new User();
 		
-		user.setUser_id(userid);
-		
-		
-		System.out.println("확인을 하자, 이걸로 진행하자 : " + user);
-		
+		user.setUser_id(userid);		
 		
 		User viewMypage = MypageService.mypageview(user);
 		
-		System.out.println("확인하자 뷰 마이페이지 : " + viewMypage);
-		System.out.println("왜 널포인트야 왜 : " + viewMypage.getUser_pw());
+
 		//회원상세정보 조회
-//		User mypage = MypageService.mypageview(user);
-//		
 		List<User> mypageList = MypageService.getMypageList(user);
 		
-		//조회결과 모델값 전달
-//		req.setAttribute("mypageList", mypageList);
-		
+		//조회결과 모델값 전달		
 		req.setAttribute("viewMypage", viewMypage);
 		
 		// view 지정 및 응답
