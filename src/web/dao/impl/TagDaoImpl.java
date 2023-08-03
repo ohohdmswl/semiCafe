@@ -148,7 +148,6 @@ public class TagDaoImpl implements TagDao {
 		sql += "DELETE from tag";
 		sql += " WHERE tag_no = ?";
 		
-		//왜 얘도 -1이지
 		int res = -1;
 		
 		try {
@@ -254,7 +253,6 @@ public class TagDaoImpl implements TagDao {
 			
 			while(rs.next()) {
 				
-				//왜 1이 들어갈까? (첫번째 인자라는 소리인가)
 				nextTagno = rs.getInt(1);
 			}
 			
