@@ -28,10 +28,6 @@ public class CafeDaoImpl implements CafeDao {
 		sql += "SELECT";
 		sql += "	cafe_no";
 		sql += "	, cafe_name";
-//		sql += "	, cafe_tel";
-//		sql += "	, cafe_time";
-//		sql += "	, cafe_park";
-//		sql += "	, cafe_rcm";
 		sql += " FROM cafe_info";
 		sql += " ORDER BY cafe_no DESC";
 		
@@ -49,10 +45,7 @@ public class CafeDaoImpl implements CafeDao {
 				//결과값 한 행 처리
 				c.setCafe_no(rs.getInt("cafe_no"));
 				c.setCafe_name( rs.getString("cafe_name") );
-//				c.setCafe_tel( rs.getString("cafe_tel") );
-//				c.setCafe_time( rs.getString("cafe_time") );
-//				c.setCafe_park( rs.getString("cafe_park") );
-//				c.setCafe_rcm( rs.getInt("cafe_rcm") );
+
 				
 				//리스트객체에 조회한 행 객체 저장
 				cafeList.add(c);
@@ -102,11 +95,7 @@ public class CafeDaoImpl implements CafeDao {
 				///결과값 한 행 처리
 				c.setCafe_no(rs.getInt("cafe_no"));
 				c.setCafe_name( rs.getString("cafe_name") );
-//				c.setCafe_tel( rs.getString("cafe_tel") );
-//				c.setCafe_time( rs.getString("cafe_time") );
-//				c.setCafe_park( rs.getString("cafe_park") );
-//				c.setCafe_rcm( rs.getInt("cafe_rcm") );
-//				
+				
 				//리스트객체에 조회한 행 객체 저장
 				cafeList.add(c);
 			}
