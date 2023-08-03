@@ -37,14 +37,14 @@ public class TagListController extends HttpServlet {
 		Paging paging = tagService.getPaging(req);
 		
 		//태그 전체 목록 조회
-//		List<Tag> tagList = tagService.getList();
+		List<Tag> tagList = tagService.getList();
 		
 		//태그 페이징 목록 조회
 		List<Tag> tagList = tagService.getList(paging);
 		
 		//조회결과 model값 전달
 		req.setAttribute("tagList", tagList);
-//		
+		
 		//페이징 model값 전달
 		req.setAttribute("paging", paging);
 		
@@ -60,26 +60,16 @@ public class TagListController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		req.setCharacterEncoding("utf-8");
-//		String[] tagno = req.getParameterValues("tag_no");
-//		for(String str : tagno) {
-//			System.out.println("선택된 태그 번호 : " + str);
-//		}
-		
 		String tagno = req.getParameter("tag_no");
-		System.out.println("라라라 : " + tagno);
 		
 		// 전달파라미터 Tag DTO에 저장
 		Tag tag_no = tagService.getTag_no(req);
-		System.out.println("태그넘버 : " + tag_no);
 		
 		// 상세보기 결과 조회
 		Tag viewTag = tagService.view(tag_no);
-		System.out.println("TagList-View viewTag - " + viewTag);
 		
-//		// 조회결과 model값 전달
+		// 조회결과 model값 전달
 		req.setAttribute("viewTag", viewTag);
-		
-		
 
 	}
 		
